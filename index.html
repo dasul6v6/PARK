@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전설의 등장 :: 박 정 호</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Orbitron:wght@900&family=Noto+Sans+KR:wght@800;900&display=swap');
+    
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #030008;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .font-impact { font-family: 'Black Han Sans', sans-serif; }
+    .font-orbitron { font-family: 'Orbitron', sans-serif; }
+
+    /* 불타는 골드 네온 타이포그래피 */
+    .neon-gold-text {
+      color: #fff7d6;
+      text-shadow: 
+        0 0 10px #ffb700,
+        0 0 20px #ffb700,
+        0 0 40px #ff8800,
+        0 0 80px #ff4500,
+        0 0 120px #ff0000;
+    }
+
+    /* 번개 이펙트 배경 */
+    .lightning-bg {
+      background: radial-gradient(circle at center, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+    }
+
+    /* 쾅! 하고 꽂히는 스프링 타격 애니메이션 */
+    .boom-left {
+      opacity: 0;
+      transform: translateX(-70%) scale(0.5) rotate(-10deg);
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+    }
+
+    .boom-right {
+      opacity: 0;
+      transform: translateX(70%) scale(0.5) rotate(10deg);
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+    }
+
+    .boom-active {
+      opacity: 1 !important;
+      transform: translateX(0) scale(1) rotate(0deg) !important;
+      animation: shake 0.3s ease-in-out 0.3s;
+    }
+
+    /* 카드 도달 시 화면 흔들림 효과 */
+    @keyframes shake {
+      0%, 100% { transform: translate(0, 0); }
+      20% { transform: translate(-8px, 5px); }
+      40% { transform: translate(8px, -5px); }
+      60% { transform: translate(-5px, 3px); }
+      80% { transform: translate(5px, -3px); }
+    }
+
+    /* 네온 테두리 박스 */
+    .neon-border-gold {
+      border: 2px solid #ffd700;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), inset 0 0 15px rgba(255, 215, 0, 0.2);
+    }
+    .neon-border-red {
+      border: 2px solid #ff0055;
+      box-shadow: 0 0 20px rgba(255, 0, 85, 0.4), inset 0 0 15px rgba(255, 0, 85, 0.2);
+    }
+    .neon-border-cyan {
+      border: 2px solid #00f0ff;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(0, 240, 255, 0.2);
+    }
+    .neon-border-green {
+      border: 2px solid #00ff66;
+      box-shadow: 0 0 20px rgba(0, 255, 102, 0.4), inset 0 0 15px rgba(0, 255, 102, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- HERO SECTION -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4 relative lightning-bg">
+    <div class="inline-block px-6 py-2 mb-6 rounded-full bg-red-600 text-white font-black text-lg uppercase tracking-widest animate-ping">
+      💥 WARNING: OVERPOWERED LEGEND 💥
+    </div>
+    
+    <p class="text-yellow-400 text-2xl md:text-3xl font-black mb-2 tracking-widest">
+      모든 부조리를 없앤 리더의 끝판왕
+    </p>
+    
+    <h1 class="text-7xl md:text-9xl font-impact neon-gold-text tracking-wider my-4">
+      박 정 호
+    </h1>
+
+    <div class="mt-8 text-xl md:text-2xl font-bold text-gray-300">
+      <span class="text-cyan-400 font-orbitron">ALL-KILL</span> 스펙트럼의 주인공
+    </div>
+
+    <div class="absolute bottom-10 animate-bounce text-yellow-400 text-center">
+      <p class="font-orbitron font-bold mb-1 text-sm tracking-widest">SCROLL TO EXPERIENCE</p>
+      <i class="fa-solid fa-angles-down text-3xl"></i>
+    </div>
+  </section>
+
+
+  <!-- TIMELINE CARD SECTION -->
+  <section class="max-w-5xl mx-auto px-6 py-20 space-y-32">
+
+    <!-- Card 1 (Left) -->
+    <div class="boom-left flex justify-start">
+      <div class="w-full md:w-5/6 bg-black/90 p-8 rounded-2xl neon-border-gold backdrop-blur-xl relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 text-yellow-500/10 text-9xl font-impact select-none">01</div>
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-yellow-400 text-black p-4 rounded-xl font-black text-3xl">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          <div>
+            <span class="text-yellow-400 text-sm font-orbitron tracking-widest">COMMANDER</span>
+            <h3 class="text-3xl font-black text-white">리더십의 끝판왕</h3>
+          </div>
+        </div>
+        <ul class="space-y-4 text-gray-200 text-lg font-bold">
+          <li class="flex items-center"><i class="fa-solid fa-bolt text-yellow-400 mr-3 text-xl"></i> 66사단 60M 박격포 포수 & 분대장 출신</li>
+          <li class="flex items-center"><i class="fa-solid fa-bolt text-yellow-400 mr-3 text-xl"></i> **여단 대표 분대장** 달성</li>
+          <li class="flex items-center text-yellow-300"><i class="fa-solid fa-skull text-yellow-400 mr-3 text-xl"></i> 부대 내 **모든 부조리를 없앤** 전설의 장본인</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 2 (Right) -->
+    <div class="boom-right flex justify-end">
+      <div class="w-full md:w-5/6 bg-black/90 p-8 rounded-2xl neon-border-red backdrop-blur-xl relative overflow-hidden">
+        <div class="absolute -left-10 -bottom-10 text-red-500/10 text-9xl font-impact select-none">02</div>
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-red-600 text-white p-4 rounded-xl font-black text-3xl">
+            <i class="fa-solid fa-crosshairs"></i>
+          </div>
+          <div>
+            <span class="text-red-400 text-sm font-orbitron tracking-widest">SNIPER GOD</span>
+            <h3 class="text-3xl font-black text-white">사격의 신 (특급전사)</h3>
+          </div>
+        </div>
+        <ul class="space-y-4 text-gray-200 text-lg font-bold">
+          <li class="flex items-center"><i class="fa-solid fa-fire text-red-500 mr-3 text-xl"></i> 야간 사격 **사단 1위**</li>
+          <li class="flex items-center"><i class="fa-solid fa-fire text-red-500 mr-3 text-xl"></i> 박격포 주특기 사격 **사단 1위**</li>
+          <li class="flex items-center text-red-400"><i class="fa-solid fa-certificate text-red-500 mr-3 text-xl"></i> **특급전사** 명예의 전당 등극</li>
+          <li class="flex items-center text-red-300"><i class="fa-solid fa-gun text-red-500 mr-3 text-xl"></i> **더 배울 게 없어서 간부 사격 조교**로 교관 활동</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 3 (Left) -->
+    <div class="boom-left flex justify-start">
+      <div class="w-full md:w-5/6 bg-black/90 p-8 rounded-2xl neon-border-cyan backdrop-blur-xl relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 text-cyan-500/10 text-9xl font-impact select-none">03</div>
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-cyan-400 text-black p-4 rounded-xl font-black text-3xl">
+            <i class="fa-solid fa-person-running"></i>
+          </div>
+          <div>
+            <span class="text-cyan-400 text-sm font-orbitron tracking-widest">MONSTER PHYSICAL</span>
+            <h3 class="text-3xl font-black text-white">괴물 같은 피지컬 & 스포츠</h3>
+          </div>
+        </div>
+        <ul class="space-y-4 text-gray-200 text-lg font-bold">
+          <li class="flex items-center"><i class="fa-solid fa-gauge-high text-cyan-400 mr-3 text-xl"></i> **188여단 달리기 전체 1위**</li>
+          <li class="flex items-center"><i class="fa-solid fa-futbol text-cyan-400 mr-3 text-xl"></i> 188여단 주전 공격형 미드필더 (CAM)</li>
+          <li class="flex items-center text-cyan-300"><i class="fa-solid fa-trophy text-cyan-400 mr-3 text-xl"></i> **족구대회 사단 우승** 하드캐리</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 4 (Right) -->
+    <div class="boom-right flex justify-end">
+      <div class="w-full md:w-5/6 bg-black/90 p-8 rounded-2xl neon-border-green backdrop-blur-xl relative overflow-hidden">
+        <div class="absolute -left-10 -bottom-10 text-green-500/10 text-9xl font-impact select-none">04</div>
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-green-500 text-black p-4 rounded-xl font-black text-3xl">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <div>
+            <span class="text-green-400 text-sm font-orbitron tracking-widest">GENIUS LEGACY</span>
+            <h3 class="text-3xl font-black text-white">문무겸비 & 조기 영재 전설</h3>
+          </div>
+        </div>
+        <ul class="space-y-4 text-gray-200 text-lg font-bold">
+          <li class="flex items-center"><i class="fa-solid fa-book-open text-green-400 mr-3 text-xl"></i> **독후감 대회 사단장 표창** (뇌까지 섹시함)</li>
+          <li class="flex items-center"><i class="fa-solid fa-medal text-green-400 mr-3 text-xl"></i> 용인대 태권도 인천 겨루기대회 **최우수상** (초3)</li>
+          <li class="flex items-center text-green-300"><i class="fa-solid fa-star text-green-400 mr-3 text-xl"></i> 육상 단거리 선수 & **기계체조 선수 스카웃 제의** (초6)</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- OUTRO SECTION -->
+  <section class="py-32 text-center bg-gradient-to-t from-red-950/40 via-transparent to-transparent">
+    <p class="text-red-500 font-black text-2xl mb-2 tracking-widest animate-pulse">THE ONE AND ONLY</p>
+    <h2 class="text-6xl md:text-8xl font-impact neon-gold-text">PARK JEONG HO</h2>
+  </section>
+
+  <!-- JS FOR SCROLL "BOOM!" ANIMATION -->
+  <script>
+    const cards = document.querySelectorAll('.boom-left, .boom-right');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('boom-active');
+        }
+      });
+    }, {
+      threshold: 0.1 // 카드가 화면에 10% 진입할 때 쾅! 하고 폭발하며 들어옴 (너무 멀리서 들어오지 않도록 조정)
+    });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
