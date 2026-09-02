@@ -35,32 +35,31 @@
       background: radial-gradient(circle at center, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
     }
 
-    /* 쾅! 하고 꽂히는 스프링 타격 애니메이션 */
+    /* 묵직하고 천천히 등장하는 애니메이션 (시간 1.2초로 대폭 연장) */
     .boom-left {
       opacity: 0;
-      transform: translateX(-70%) scale(0.5) rotate(-10deg);
-      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+      transform: translateX(-80%) scale(0.7) rotate(-5deg);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .boom-right {
       opacity: 0;
-      transform: translateX(70%) scale(0.5) rotate(10deg);
-      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+      transform: translateX(80%) scale(0.7) rotate(5deg);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .boom-active {
       opacity: 1 !important;
       transform: translateX(0) scale(1) rotate(0deg) !important;
-      animation: shake 0.3s ease-in-out 0.3s;
+      animation: heavy-landing 0.4s ease-in-out 1.2s;
     }
 
-    /* 카드 도달 시 화면 흔들림 효과 */
-    @keyframes shake {
+    /* 카드 안착 시 묵직한 진동 효과 */
+    @keyframes heavy-landing {
       0%, 100% { transform: translate(0, 0); }
-      20% { transform: translate(-8px, 5px); }
-      40% { transform: translate(8px, -5px); }
-      60% { transform: translate(-5px, 3px); }
-      80% { transform: translate(5px, -3px); }
+      25% { transform: translate(-6px, 4px); }
+      50% { transform: translate(6px, -4px); }
+      75% { transform: translate(-3px, 2px); }
     }
 
     /* 네온 테두리 박스 */
@@ -190,7 +189,8 @@
           </div>
         </div>
         <ul class="space-y-4 text-gray-200 text-lg font-bold">
-          <li class="flex items-center"><i class="fa-solid fa-book-open text-green-400 mr-3 text-xl"></i> **독후감 대회 사단장 표창** (뇌까지 섹시함)</li>
+          <li class="flex items-center text-green-300"><i class="fa-solid fa-lightbulb text-green-400 mr-3 text-xl"></i> **IQ 134 (멘사 기준 154)** 상위 1% 브레인</li>
+          <li class="flex items-center"><i class="fa-solid fa-book-open text-green-400 mr-3 text-xl"></i> **독후감 대회 사단장 표창** (지성까지 완벽)</li>
           <li class="flex items-center"><i class="fa-solid fa-medal text-green-400 mr-3 text-xl"></i> 용인대 태권도 인천 겨루기대회 **최우수상** (초3)</li>
           <li class="flex items-center text-green-300"><i class="fa-solid fa-star text-green-400 mr-3 text-xl"></i> 육상 단거리 선수 & **기계체조 선수 스카웃 제의** (초6)</li>
         </ul>
@@ -205,7 +205,7 @@
     <h2 class="text-6xl md:text-8xl font-impact neon-gold-text">PARK JEONG HO</h2>
   </section>
 
-  <!-- JS FOR SCROLL "BOOM!" ANIMATION -->
+  <!-- JS FOR SLOW DRAMATIC ANIMATION -->
   <script>
     const cards = document.querySelectorAll('.boom-left, .boom-right');
 
@@ -216,7 +216,7 @@
         }
       });
     }, {
-      threshold: 0.1 // 카드가 화면에 10% 진입할 때 쾅! 하고 폭발하며 들어옴 (너무 멀리서 들어오지 않도록 조정)
+      threshold: 0.15
     });
 
     cards.forEach(card => observer.observe(card));
